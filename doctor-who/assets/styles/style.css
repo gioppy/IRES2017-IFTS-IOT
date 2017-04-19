@@ -1,0 +1,26 @@
+p{
+  color: hsl(310, 100%, 50%);
+}
+
+.text-blue{
+  color: blue;
+}
+
+#text-white{
+  color: white;
+  background-color: #000000;
+}
+
+.article-header-title{
+  font-size: 300%;
+}
+
+.article{
+  width: 496px;
+  /*
+  border-width: 2px 13px;
+  border-color: red green violet transparent;
+  border-style: solid dotted dashed groove;
+  */
+  border: 2px solid red;
+}
