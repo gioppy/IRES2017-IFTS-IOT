@@ -26,9 +26,23 @@ body{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  position: relative;
 }
 
 /* Navigation */
+
+.main-navigation{
+  position: absolute;
+  bottom: 5%;
+  /*left: 50%;
+  margin-left: -470px;*/
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*.main-navigation:hover{
+  bottom: 0;
+}*/
 
 .main-navigation__list{
   display: flex;
@@ -39,6 +53,7 @@ body{
 
 .main-navigation__item{
   display: inline-block;
+  text-transform: uppercase;
   /*width: 16%;*/
   /*width: calc(100%/6);*/
   /*display:  inline;*/
@@ -50,8 +65,14 @@ body{
 .main-navigation__link{
   color: #fff;
   text-decoration: none;
+  transition: color .8s ease-out 2s, font-size 3s ease-in;
 }
 
-
+.main-navigation__link:hover,
+.main-navigation__link:focus{
+  text-decoration:  underline;
+  color: #00aaef;
+  font-size: 2em;
+}
 
 
