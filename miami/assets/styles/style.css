@@ -6,11 +6,48 @@ body{
   color: #000;
 }
 
+.box-wrapper{
+  background-color: #fff;
+  /*padding-top: 5%;
+  padding-bottom: 5%;*/
+  padding: 5% 0;
+}
+
+.box-wrapper--grey{
+  background-color: #EEE;
+}
+
 .box-content{
   width: 940px;
   /*width: 80%;*/
   margin-left: auto;
   margin-right: auto;
+}
+
+.strong{
+  font-weight: 500;
+}
+
+.blue{
+  color: #00aaef;
+}
+
+/*.clearfix::before{
+  content: 'This content is from BEFORE';
+}*/
+
+.clearfix::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.element-on-left{
+  float: left;
+}
+
+.element-on-right{
+  float: right;
 }
 
 /* HEADER */
@@ -27,6 +64,13 @@ body{
   -o-background-size: cover;
   background-size: cover;
   position: relative;
+}
+
+/* Logo */
+
+.main-logo{
+  text-align: center;
+  padding-top: 5%;
 }
 
 /* Navigation */
@@ -65,14 +109,43 @@ body{
 .main-navigation__link{
   color: #fff;
   text-decoration: none;
-  transition: color .8s ease-out 2s, font-size 3s ease-in;
+  /*transition: color .8s ease-out 2s, font-size 3s ease-in;*/
+  transition: color .4s;
 }
 
 .main-navigation__link:hover,
 .main-navigation__link:focus{
   text-decoration:  underline;
   color: #00aaef;
-  font-size: 2em;
+  /*font-size: 2em;*/
 }
 
+.column-title{
+  width: 30%;
+}
+
+.column-text{
+  width: 60%;
+}
+
+.title{
+  text-transform:  uppercase;
+  font-weight: 300;
+  font-size: 2.4em;
+  line-height: 1.2;
+}
+
+.text p{
+  line-height: 1.4;
+  margin-bottom: 30px;
+}
+
+.text ol,
+.text ul{
+  margin-bottom:  30px;
+}
+
+.text li{
+  margin-bottom: 6px;
+}
 
