@@ -3,14 +3,68 @@
 <head>
   <title>Js Test</title>
   <meta charset="utf-8" />
+  <style type="text/css">
+    button{
+      transition: font-size 1s;
+    }
+    .large{
+      font-size: 2em;
+    }
+  </style>
 </head>
 <body>
-  <button id="send-mail" type="button">Send Email</button>
+  <!--<button 
+  id="send-mail" 
+  type="button" 
+  onclick="sayHello(this, event)">Send Email</button>-->
+  <label for="name">Your name</label>
+  <input type="text" id="name" value="" />
+  <button 
+  id="send-mail" 
+  type="button">Send Email</button>
+
+  <p id="output"></p>
 
   <script>
     var btn = document.getElementById('send-mail');
-    btn.classList.add('from-javascript');
-    console.log(btn);
+    btn.addEventListener('click', toggleClass);
+
+    var nameItem = document.querySelector('#name');
+    var outputItem = document.querySelector('#output');
+    nameItem.addEventListener('keyup', outputBinding);
+
+    function outputBinding(evt) {
+      var name = evt.target.value;
+      outputItem.innerHTML = 'Hello ' + name;
+      console.log(name);
+    }
+
+    function toggleClass() {
+      if(btn.classList.contains('large')){
+        btn.classList.remove('large');
+      }else{
+        btn.classList.add('large');
+      }
+    }
+    //console.log(btn.classList);
+    //btn.classList.add('from-javascript');
+    //console.log(btn);
+
+    /*btn.onclick = sayHello;
+    btn.onclick = sayHi;*/
+
+    /*btn.addEventListener('click', sayHello);
+    btn.addEventListener('click', sayHi);
+
+    function sayHello(evt) {
+      console.log('Hello!');
+      //console.log(elem);
+      console.log(evt);
+    }
+
+    function sayHi() {
+      console.log("Hi");
+    }*/
   </script>
 
   <!--<script src="concatenazione.js"></script>-->
